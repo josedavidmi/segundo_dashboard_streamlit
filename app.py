@@ -9,7 +9,7 @@ st.title("Dashboard en streaming desde un log CSV")
 st_autorefresh(interval=2000, key="datarefresh")
 
 # El resto de tu código (lectura de CSV y visualización)
-df = pd.read_csv("https://raw.githubusercontent.com/josedavidmi/iabd-sbd/refs/heads/main/log_streamlit.log", header=0)
+df = pd.read_csv("https://raw.githubusercontent.com/josedavidmi/iabd-sbd/refs/heads/main/log_streamlit.log")
 st.dataframe(df)
 # Mostrar datos 
 st.subheader("Últimos datos") 
