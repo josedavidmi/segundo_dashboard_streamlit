@@ -15,6 +15,6 @@ st.dataframe(df)
 st.subheader("Últimos datos") 
 st.dataframe(df.tail(2)) 
 # Mostrar métricas 
-#st.metric("Último valor", df["valor"].iloc[-1]) 
+st.metric("Último valor", df["valor"].iloc[-1]) 
 # Gráfico en tiempo real 
-#st.line_chart(df["valor"]) 
+st.line_chart(df["valor"]) 
