@@ -9,12 +9,12 @@ st.title("Dashboard en streaming desde un log CSV")
 st_autorefresh(interval=2000, key="datarefresh")
 
 # El resto de tu código (lectura de CSV y visualización)
-df = pd.read_csv("https://raw.githubusercontent.com/josedavidmi/iabd-sbd/refs/heads/main/log_streamlit.log")
+df = pd.read_csv("https://raw.githubusercontent.com/josedavidmi/iabd-sbd/refs/heads/main/log_streamlit.log", header=0)
 st.dataframe(df)
 # Mostrar datos 
 st.subheader("Últimos datos") 
-st.dataframe(df.tail(10)) 
+st.dataframe(df.tail(2)) 
 # Mostrar métricas 
-st.metric("Último valor", df["valor"].iloc[-1]) 
+#st.metric("Último valor", df["valor"].iloc[-1]) 
 # Gráfico en tiempo real 
-st.line_chart(df["valor"]) 
+#st.line_chart(df["valor"]) 
