@@ -18,6 +18,3 @@ st.dataframe(df.tail(10))
 st.metric("Último valor", df["valor"].iloc[-1]) 
 # Gráfico en tiempo real 
 st.line_chart(df["valor"]) 
-# Esperar y refrescar 
-time.sleep(2) 
-st.experimental_rerun()
